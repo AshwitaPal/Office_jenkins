@@ -1,16 +1,7 @@
-FROM amazonlinux:2
+FROM ubuntu:latest
 
-# Install required packages
-
-RUN amazon-linux-extras install -y epel && yum update -y && yum install -y nginx
-
-# Expose ports
+RUN apt-get update -y && apt-get upgrade -y && apt install nginx -y
 
 EXPOSE 80
-
-EXPOSE 443
-
-
-# Start Nginx
 
 CMD ["nginx", "-g", "daemon off;"]
