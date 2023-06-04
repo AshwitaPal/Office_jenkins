@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: acrreponew.azurecr.io/java
+  repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -37,7 +37,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 80
 
 ingress:
