@@ -33,7 +33,7 @@ pipeline {
         stage('Upload Image to ACR') {
          steps{   
             sh '''
-            docker login acrreponew.azurecr.io -u ACRrepoNew -p 2Eb4DBm4lzcjauw6vPI/h3yJk0udkj9jvx4g2hd+SU+ACRCRpfJv
+            docker login acrreponew.azurecr.io -u ACRrepoNew -p 2***************************v
             docker tag registry:"$BUILD_NUMBER" acrreponew.azurecr.io/java:$BUILD_NUMBER
             docker push acrreponew.azurecr.io/java:$BUILD_NUMBER
             '''
